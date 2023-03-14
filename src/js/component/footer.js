@@ -4,10 +4,11 @@ import sableizq from '../../img/sableizq.png';
 
 
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
+	<nav class="navbar fixed-bottom" id="footer">
 		<p>
-		<img src={sableizq} alt="sable" className="sable"/>
+		<img src={sableizq} alt="sable" className="sable"/>Hecho por Ana Pacheco
 			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
 		</p>
-	</footer>
+		</nav>
 );
+

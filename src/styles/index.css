@@ -9,7 +9,7 @@
     background-color: black;
 }
 
-#app{
+body{
     background-image: url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80");
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,4 +17,23 @@
 }
 .card{
     background-color: black;
+}
+p {
+    flex-direction: column;
+    margin: auto;
+    color: cyan;
+  }
+p > img{
+width: 200px;
+margin: auto;
+}
+p > a{
+    margin-left: 5px;
+}
+#footer{
+    background-color: black;
+
+}
+#navbar{
+    height: fit-content;
 }
