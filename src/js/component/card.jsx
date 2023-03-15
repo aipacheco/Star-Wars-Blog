@@ -3,6 +3,7 @@ import "../../styles/card.css";
 
 const Card = (props) =>{
 return (
+
 <div className="cartas">
 <div className="card" style={{ width: '18rem' }}>
   <img className="card-img-top" src="..." alt="Card image cap"></img>
@@ -13,6 +14,7 @@ return (
   </div>
 </div>
 </div>
+
 )
 
 }

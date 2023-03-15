@@ -32,15 +32,25 @@ export const Home = () => {
   }, [planetsList]);
 
   return (
-    <div className="container" id="home">
-      {planetsList.map((planet) => (
-        <Card
-          key={planet.id}
-          name={planet.name}
-          description={planet.description}
-          imageUrl={planet.imageUrl}
-        />
-      ))}
-    </div>
+    <>
+      <div className="container container-fluid d-flex">
+        {planetsList.map((planet) => (
+          <Card key={planet.uid} name={planet.name}>
+            {" "}
+            <p>{planet.url}</p>{" "}
+          </Card>
+        ))}
+      </div>
+      <div className="container container-fluid d-flex">
+        {peopleList.map((planet) => (
+          <Card key={planet.uid} name={planet.name} />
+        ))}
+      </div>
+      <div className="container container-fluid d-flex">
+        {vehiclesList.map((planet) => (
+          <Card key={planet.uid} name={planet.name} />
+        ))}
+      </div>
+    </>
   );
 };
