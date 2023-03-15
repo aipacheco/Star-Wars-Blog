@@ -1,7 +1,15 @@
-.cartas{
-    background-color: rgba(0, 0, 0, 0.51) ;
+.cartas {
+    background-color: rgba(0, 0, 0, 0.51);
     height: 300px;
-}
-.card{
-    background-color: white
-}
+    white-space: nowrap; /* Evita que las cartas se muevan a una nueva línea */
+    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si las cartas son más anchas que el contenedor */
+  }
+  
+  .card {
+    background-color: rgb(66, 104, 255);
+    display: inline-block; /* Muestra todas las cartas en una sola línea */
+    height: 100%; /* Asegura que las cartas ocupen toda la altura del contenedor */
+    width: 200px; /* Agrega un ancho a las cartas para evitar que se superpongan */
+    margin-right: 10px; /* Agrega un margen derecho para separar las cartas */
+  }
+  
