@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {Home} from "./views/home";
-import {Single} from "./views/single";
+import {Home} from "./views/home.jsx";
+import {Single} from "./views/single.jsx";
 import injectContext from "./store/appContext";
 import {Navbar} from "./component/navbar.jsx";
 import {Footer} from "./component/footer.jsx";
@@ -19,7 +19,7 @@ const Layout = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/single/:theid" element={<Single />} />
+          <Route path="/single/:type/:uid" element={<Single />} />
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>
         <Footer />
