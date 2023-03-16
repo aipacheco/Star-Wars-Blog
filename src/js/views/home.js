@@ -21,7 +21,7 @@ export const Home = () => {
     setPlanetsList(planets.results);
   }, []);
 
-  useEffect(() => {
+ /* useEffect(() => {
     console.log("people", peopleList);
   }, [peopleList]);
   useEffect(() => {
@@ -29,26 +29,26 @@ export const Home = () => {
   }, [vehiclesList]);
   useEffect(() => {
     console.log("planets", planetsList);
-  }, [planetsList]);
+  }, [planetsList]);*/
 
   return (
     <>
-      <div className="container container-fluid d-flex">
+      <div className="carrusel">
         {planetsList.map((planet) => (
-          <Card key={planet.uid} name={planet.name}>
-            {" "}
+          <Card key={planet.uid} name={planet.name} image="https://m.media-amazon.com/images/I/91QQcA418vL._AC_SL1500_.jpg">
+          
             <p>{planet.url}</p>{" "}
           </Card>
         ))}
       </div>
-      <div className="container container-fluid d-flex">
+      <div className="carrusel">
         {peopleList.map((planet) => (
-          <Card key={planet.uid} name={planet.name} />
+          <Card key={planet.uid} name={planet.name} image="https://imgix.ranker.com/list_img_v2/995/380995/original/380995-u2"/>
         ))}
       </div>
-      <div className="container container-fluid d-flex">
+      <div className="carrusel">
         {vehiclesList.map((planet) => (
-          <Card key={planet.uid} name={planet.name} />
+          <Card key={planet.uid} name={planet.name} image="https://i.redd.it/8jq5dg94v3t81.jpg" />
         ))}
       </div>
     </>

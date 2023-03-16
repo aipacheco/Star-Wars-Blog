@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    width: 10px; /* ancho de la barra de desplazamiento */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #000000; /* color de fondo de la barra */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #000000; /* color de la barra */
+    box-shadow: inset 0px 0px 8px 3px rgba(92, 171, 255,0.95);
+    border-radius: 30px;
+    height: 0px; 
+  }
+
+  
