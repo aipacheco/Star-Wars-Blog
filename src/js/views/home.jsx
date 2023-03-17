@@ -9,7 +9,7 @@ export const Home = () => {
   const [peopleList, setPeopleList] = useState([]);
   const [vehiclesList, setVehiclesList] = useState([]);
   const [planetsList, setPlanetsList] = useState([]);
-  
+
   const navigate = useNavigate();
 
   useEffect(async () => {
@@ -27,7 +27,7 @@ export const Home = () => {
  
 
   return (
-    <>
+    <div className="container">
       <div className="carrusel">
         {planetsList.map((planet, key) => (
        
@@ -36,7 +36,7 @@ export const Home = () => {
             category={"planet"}
             name={planet.name}
             id={planet.uid}
-            image="https://m.media-amazon.com/images/I/91QQcA418vL._AC_SL1500_.jpg"
+            image={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`}
           ></Card>
         ))}
       </div>
@@ -46,7 +46,8 @@ export const Home = () => {
             key={key}
             name={people.name}
             category={"people"}
-            image="https://imgix.ranker.com/list_img_v2/995/380995/original/380995-u2"
+            id={people.uid}
+            image={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
           />
         ))}
       </div>
@@ -56,11 +57,12 @@ export const Home = () => {
             key={key}
             name={vehicle.name}
             category={"vehicle"}
-            image="https://i.redd.it/8jq5dg94v3t81.jpg"
+            id={vehicle.uid}
+            image={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`}
           />
         ))}
       </div>
-    </>
+    </div>
   );
  
 };
