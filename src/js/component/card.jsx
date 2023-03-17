@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/card.css";
+import { Link } from "react-router-dom";
 
 const Card = (props) =>{
 return (
@@ -10,10 +11,12 @@ return (
   <div className="card-body">
     <h5 className="card-title">{props.name}</h5>
   </div>
-  <div class="card-footer">
+  <div className="card-footer">
 
-  <div className="btn btn-primary">Learn more</div>
-  <div className="btn btn-primary"><i class="fa-regular fa-heart"></i></div>
+  <Link to={`single/${props.category}/${props.id}`}> 
+    <button type="button" className="btn btn-outline-secondary">Info</button>
+    </Link>
+  <div className="btn btn-primary"><i className="fa-regular fa-heart"></i></div>
   </div>
 </div>
 </div>
