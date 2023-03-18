@@ -1,0 +1,9 @@
+.single {
+    width: fit-content;
+    color: aliceblue;
+    padding: 20px;
+}
+
+button {
+    margin-top: 20px;
+}

@@ -15,8 +15,6 @@ export const Home = () => {
   useEffect(async () => {
     const people = await getData("people", "");
     setPeopleList(people.results);
-  
-
 
     const vehicles = await getData("vehicles", "");
     setVehiclesList(vehicles.results);
@@ -24,19 +22,18 @@ export const Home = () => {
     const planets = await getData("planets", "");
     setPlanetsList(planets.results);
   }, []);
- 
 
   return (
     <div className="container">
       <div className="carrusel">
         {planetsList.map((planet, key) => (
-       
           <Card
             key={key}
             category={"planet"}
             name={planet.name}
             id={planet.uid}
-            image={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`}
+            image={key === 0 ? "https://oakthorne.net/wiki/images/Tatooine.jpg" : `https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`
+            }
           ></Card>
         ))}
       </div>
@@ -64,5 +61,4 @@ export const Home = () => {
       </div>
     </div>
   );
- 
 };

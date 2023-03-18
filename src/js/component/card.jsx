@@ -16,7 +16,7 @@ return (
   <Link to={`single/${props.category}/${props.id}`}> 
     <button type="button" className="btn btn-outline-secondary">Info</button>
     </Link>
-  <div className="btn btn-primary"><i className="fa-regular fa-heart"></i></div>
+  <div className="btn btn-outline-secondary"><i className="fa-regular fa-heart"></i></div>
   </div>
 </div>
 </div>
