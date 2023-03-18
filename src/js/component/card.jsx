@@ -3,15 +3,13 @@ import "../../styles/card.css";
 import {Link} from "react-router-dom";
 
 const Card = (props) => {
-  let singlePage = "";
 
-  if (props.category == "people") {
-    singlePage = "singlePeople";
-  } else if (props.category == "vehicles") {
-    singlePage = "singleVehicle";
-  } else if (props.category == "planets") {
-    singlePage = "singlePlanet";
-  }
+
+  const singlePage = (props.category == "people") ? "singlePeople"
+  : (props.category == "vehicles") ? "singleVehicle"
+  : (props.category == "planets") ? "singlePlanet"
+  : null;
+
 
   return (
     <div className="cartas">
