@@ -29,7 +29,7 @@ export const Home = () => {
         {planetsList.map((planet, key) => (
           <Card
             key={key}
-            category={"planet"}
+            category={"planets"}
             name={planet.name}
             id={planet.uid}
             image={key === 0 ? "https://oakthorne.net/wiki/images/Tatooine.jpg" : `https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`
@@ -53,7 +53,7 @@ export const Home = () => {
           <Card
             key={key}
             name={vehicle.name}
-            category={"vehicle"}
+            category={"vehicles"}
             id={vehicle.uid}
             image={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`}
           />

@@ -3,7 +3,10 @@ import "../../styles/card.css";
 import { Link } from "react-router-dom";
 
 const Card = (props) =>{
+
+  console.log("El prop",props)
 return (
+
 
 <div className="cartas">
 <div className="card" style={{ width: '18rem' }}>
