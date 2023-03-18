@@ -7,26 +7,28 @@ import { getData } from "../service/index.js";
 
 export const Single = () => {
 
-	const [info, setInfo] = useState({})
+	const [single, setSingle] = useState({})
 
     const params = useParams()
 
-useEffect(async () => {
+    useEffect(async () => {
+        //setloading//
         const info = await getData(params.category, params.id);
         console.log(info)
-        setInfo(info.result)}
-,[])
+        setSingle(info.result)
+    }, [])
+
 
 	return (
 		<>
 		<div className="single">				
 		<div className="row g-0">
 					<div className="col-md-4">
-					<img src={`https://starwars-visualguide.com/assets/img/characters/${params.id}.jpg`} className="img-fluid rounded-start" alt="..." />
+					<img src={`https://starwars-visualguide.com/assets/img/character/${params.id}.jpg`} className="img-fluid rounded-start" alt="..." />
 					</div>
 					<div className="col-md-8">
 						<div className="card-body">
-							<h5 className="card-title"> {info.description}</h5>
+							<h5 className="card-title"> {single.description}</h5>
 							<p className="card-text"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 							 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
 							 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
