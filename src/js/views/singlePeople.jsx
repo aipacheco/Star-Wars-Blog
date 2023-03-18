@@ -8,11 +8,14 @@ export const SinglePeople = () => {
 
   const params = useParams();
 
-  useEffect(async () => {
-    const info = await getData(params.category, params.id);
-    setSinglePeople(info.result.properties);
-
-  }, []);
+  useEffect(() => {
+    async function fetchData() {
+      const info = await getData(params.category, params.id);
+      setSinglePeople(info.result.properties);
+    }
+    fetchData();
+  }, [params.category, params.id]);
+  
 
   console.log("el Personaje", singlePeople);
 
@@ -46,7 +49,7 @@ export const SinglePeople = () => {
         </div>
 
         <Link to="/">
-          <button className="btn btn-dark btn-lg" href="#" role="button">
+          <button className="btn btn-dark btn-lg" role="button">
             Volver al Inicio
           </button>
         </Link>

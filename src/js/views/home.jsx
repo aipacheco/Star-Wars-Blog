@@ -12,16 +12,20 @@ export const Home = () => {
 
   const navigate = useNavigate();
 
-  useEffect(async () => {
-    const people = await getData("people", "");
-    setPeopleList(people.results);
-
-    const vehicles = await getData("vehicles", "");
-    setVehiclesList(vehicles.results);
-
-    const planets = await getData("planets", "");
-    setPlanetsList(planets.results);
+  useEffect(() => {
+    async function fetchData() {
+      const people = await getData("people", "");
+      setPeopleList(people.results);
+  
+      const vehicles = await getData("vehicles", "");
+      setVehiclesList(vehicles.results);
+  
+      const planets = await getData("planets", "");
+      setPlanetsList(planets.results);
+    }
+    fetchData();
   }, []);
+  
 
   return (
     <div className="container">

@@ -8,11 +8,14 @@ export const SinglePlanet = () => {
 
   const params = useParams();
 
-  useEffect(async () => {
-    const info = await getData(params.category, params.id);
-    setSinglePlanet(info.result.properties);
-
-  }, []);
+  useEffect(() => {
+    async function fetchData() {
+      const info = await getData(params.category, params.id);
+      setSinglePlanet(info.result.properties);
+    }
+    fetchData();
+  }, [params.category, params.id]);
+  
 
   console.log("el Planeta", singlePlanet);
 
