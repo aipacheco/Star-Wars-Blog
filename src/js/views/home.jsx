@@ -29,6 +29,18 @@ export const Home = () => {
 
   return (
     <div className="container">
+   
+      <div className="carrusel">
+        {peopleList.map((people, key) => (
+          <Card
+            key={key}
+            name={people.name}
+            category={"people"}
+            id={people.uid}
+            image={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
+          />
+        ))}
+      </div>
       <div className="carrusel">
         {planetsList.map((planet, key) => (
           <Card
@@ -39,17 +51,6 @@ export const Home = () => {
             image={key === 0 ? "https://oakthorne.net/wiki/images/Tatooine.jpg" : `https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`
             }
           ></Card>
-        ))}
-      </div>
-      <div className="carrusel">
-        {peopleList.map((people, key) => (
-          <Card
-            key={key}
-            name={people.name}
-            category={"people"}
-            id={people.uid}
-            image={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
-          />
         ))}
       </div>
       <div className="carrusel">
