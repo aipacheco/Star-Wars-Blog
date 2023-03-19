@@ -14,7 +14,12 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar sticky-top" id="navbar">
-        <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link> 
+
+     <div className="logo-container">
+    <Link to="/">
+      <img src={logo} alt="Logo" className="logo" />
+    </Link>
+  </div>
 
       <div className="mx-5">
         <div className="dropdown">
@@ -26,20 +31,28 @@ export const Navbar = () => {
           >
             Favoritos
           </button>
-          <ul className="dropdown-menu dropdown-menu-end">
-            {store.fav.map((item, key) => (
-              <li key={key}>
-                {item}
-                <i
-                  className="fa-solid fa-xmark"
-                  onClick={() => handleDelete(item)}
-                ></i>
+
+          {store.fav.length === 0 ? (
+            <ul className="dropdown-menu dropdown-menu-end">
+              <li>
+                <p>No hay elementos favoritos aún</p>
               </li>
-            ))}
-          </ul>
+            </ul>
+          ) : (
+            <ul className="dropdown-menu dropdown-menu-end">
+              {store.fav.map((item, key) => (
+                <li key={key}>
+                  {item}
+                  <i
+                    className="fa-solid fa-xmark"
+                    onClick={() => handleDelete(item)}
+                  ></i>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </nav>
   );
 };
-

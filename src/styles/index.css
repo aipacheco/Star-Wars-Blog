@@ -1,15 +1,26 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
 .logo {
-    width: 120px;
-    margin: auto;
+    width: 150px;
     margin-top: 5px;
-    padding: 0;
+
 }
 
-.navbar {
-    background-color: rgba(0, 0, 0, 0.95);
-}
 
-body{
+
+body {
     background-image: url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,34 +30,48 @@ body{
 p {
     flex-direction: column;
     margin: auto;
-  }
-p > img{
-width: 200px;
-margin: auto;
 }
-p > a{
+
+p>img {
+    width: 200px;
+    margin: auto;
+}
+
+p>a {
     margin-left: 5px;
 }
-#footer{
-  margin-top: 20px;
+
+#footer {
+    margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.95);
-    color:rgb(0, 102, 255);
+    color: rgb(0, 102, 255);
 
 }
-#navbar{
+
+#navbar {
     height: fit-content;
-   
+
+}
+
+.dropdown-menu.show{
+    background-color: black;
 }
 
 .dropdown-menu li {
+    background-color: black;
+    color: aliceblue;
+    width: 300px;
+    margin-left: 5px;
     position: relative;
-    padding-right: 10px; /* agregar un espacio para el icono */
-  }
+    padding-right: 10px;
+    /* agregar un espacio para el icono */
+}
+
 .dropdown-menu li i {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 10px;
     transform: translateY(-40%);
-    float: right; /* agregar float a la derecha */
-  }
-  
+    float: right;
+    /* agregar float a la derecha */
+}

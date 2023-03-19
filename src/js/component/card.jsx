@@ -36,8 +36,8 @@ const Card = (props) => {
               Info
             </button>
           </Link>
-          <div className="btn btn-outline-secondary">
-            <i className="fa-regular fa-heart" onClick={handleClick}></i>
+          <div className="btn btn-outline-secondary" onClick={handleClick}>
+            <i className="fa-regular fa-heart"></i>
           </div>
         </div>
       </div>
