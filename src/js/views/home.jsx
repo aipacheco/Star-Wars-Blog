@@ -32,6 +32,7 @@ export const Home = () => {
             name={people.name}
             category={"people"}
             id={people.uid}
+            className="card-image"
             image={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
           />
         ))}
@@ -43,6 +44,7 @@ export const Home = () => {
             category={"planets"}
             name={planet.name}
             id={planet.uid}
+            className="card-image"
             image={
               key === 0
                 ? "https://oakthorne.net/wiki/images/Tatooine.jpg"
@@ -58,6 +60,7 @@ export const Home = () => {
             name={vehicle.name}
             category={"vehicles"}
             id={vehicle.uid}
+            className="card-image"
             image={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`}
           />
         ))}

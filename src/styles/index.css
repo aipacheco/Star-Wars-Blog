@@ -21,7 +21,7 @@
 
 
 body {
-    background-image: url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80");
+    background-image: url("https://img.freepik.com/foto-gratis/formas-geometricas-abstractas-fondo-o-textura_1194-301824.jpg?w=1060&t=st=1679263312~exp=1679263912~hmac=957f411a7b1cded1acbf5f7a131b0b5f41074e565a2a750d0daf60e6649f7bc7");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -42,7 +42,7 @@ p>a {
 }
 
 #footer {
-    margin-top: 20px;
+   
     background-color: rgba(0, 0, 0, 0.95);
     color:#F5B80B;
 
