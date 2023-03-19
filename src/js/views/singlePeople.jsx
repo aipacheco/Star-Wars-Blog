@@ -47,13 +47,13 @@ export const SinglePeople = () => {
             </div>
           </div>
         </div>
-
-        <Link to="/">
-          <button className="btn btn-dark btn-lg" role="button">
+      </div>
+      
+      <Link to="/">
+          <button className="btn btn-outline-secondary btn-lg" role="button">
             Volver al Inicio
           </button>
         </Link>
-      </div>
     </>
   );
 };

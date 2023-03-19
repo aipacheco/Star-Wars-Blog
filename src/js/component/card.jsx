@@ -10,6 +10,9 @@ const Card = (props) => {
   : (props.category == "planets") ? "singlePlanet"
   : null;
 
+  const handleClick = () =>{
+    
+  }
 
   return (
     <div className="cartas">
@@ -29,7 +32,7 @@ const Card = (props) => {
             </button>
           </Link>
           <div className="btn btn-outline-secondary">
-            <i className="fa-regular fa-heart"></i>
+            <i className="fa-regular fa-heart" onClick={handleClick} ></i>
           </div>
         </div>
       </div>

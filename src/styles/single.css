@@ -2,8 +2,15 @@
     width: fit-content;
     color: aliceblue;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin: 100px;
+    border-radius: 20px;
 }
 
 button {
-    margin-top: 20px;
+    margin: 0px;
+   
+}
+.btn-lg{
+margin: 100px;
 }

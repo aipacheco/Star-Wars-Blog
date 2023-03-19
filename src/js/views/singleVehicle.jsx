@@ -48,12 +48,13 @@ export const SingleVehicle = () => {
           </div>
         </div>
 
-        <Link to="/">
-          <button className="btn btn-dark btn-lg" href="#" role="button">
+
+      </div>
+      <Link to="/">
+          <button className="btn btn-outline-secondary btn-lg" href="#" role="button">
             Volver al Inicio
           </button>
         </Link>
-      </div>
     </>
   );
 };
