@@ -8,9 +8,26 @@ export const Navbar = () => {
 		
 		<nav className="navbar sticky-top" id="navbar">
 			<img src={logo} alt="Logo" className="logo"/>
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">favoritos</span>
-			</Link>
+
+			<div className="mx-5">
+        <div class="dropdown">
+          <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+           Favoritos 
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              (pruebas)
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+		
 		</nav>
 		
 	);
