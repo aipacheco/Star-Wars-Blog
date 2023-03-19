@@ -32,11 +32,11 @@ const Card = (props) => {
         </div>
         <div className="card-footer">
           <Link to={`${singlePage}/${props.category}/${props.id}`}>
-            <button type="button" className="btn btn-outline-secondary">
+            <button type="button" className="btn btn-outline-warning">
               Info
             </button>
           </Link>
-          <div className="btn btn-outline-secondary" onClick={handleClick}>
+          <div className="btn btn-outline-warning" onClick={handleClick}>
             <i className="fa-regular fa-heart"></i>
           </div>
         </div>

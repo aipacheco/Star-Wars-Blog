@@ -51,7 +51,7 @@ export const SingleVehicle = () => {
 
       </div>
       <Link to="/">
-          <button className="btn btn-outline-secondary btn-lg" href="#" role="button">
+          <button className="btn btn-outline-warning btn-lg" href="#" role="button">
             Volver al Inicio
           </button>
         </Link>

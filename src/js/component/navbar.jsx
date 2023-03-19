@@ -24,7 +24,7 @@ export const Navbar = () => {
       <div className="mx-5">
         <div className="dropdown">
           <button
-            className="btn btn-outline-secondary dropdown-toggle"
+            className="btn btn-outline-warning dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"

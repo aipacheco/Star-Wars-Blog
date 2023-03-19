@@ -54,7 +54,7 @@ export const SinglePlanet = () => {
       </div>
       <Link to="/">
         <button
-          className="btn btn-outline-secondary btn-lg"
+          className="btn btn-outline-warning btn-lg"
           href="#"
           role="button"
         >

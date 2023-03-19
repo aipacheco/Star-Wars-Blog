@@ -50,7 +50,7 @@ export const SinglePeople = () => {
       </div>
       
       <Link to="/">
-          <button className="btn btn-outline-secondary btn-lg" role="button">
+          <button className="btn btn-outline-warning btn-lg" role="button">
             Volver al Inicio
           </button>
         </Link>
