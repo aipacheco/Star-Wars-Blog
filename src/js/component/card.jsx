@@ -1,18 +1,23 @@
-import React from "react";
+import React, {useContext} from "react";
 import "../../styles/card.css";
 import {Link} from "react-router-dom";
+import {Context} from "../store/appContext.js";
 
 const Card = (props) => {
+  const {store, actions} = useContext(Context);
 
+  const singlePage =
+    props.category == "people"
+      ? "singlePeople"
+      : props.category == "vehicles"
+      ? "singleVehicle"
+      : props.category == "planets"
+      ? "singlePlanet"
+      : null;
 
-  const singlePage = (props.category == "people") ? "singlePeople"
-  : (props.category == "vehicles") ? "singleVehicle"
-  : (props.category == "planets") ? "singlePlanet"
-  : null;
-
-  const handleClick = () =>{
-    
-  }
+  const handleClick = () => {
+    actions.addFav(props.name);
+  };
 
   return (
     <div className="cartas">
@@ -32,7 +37,7 @@ const Card = (props) => {
             </button>
           </Link>
           <div className="btn btn-outline-secondary">
-            <i className="fa-regular fa-heart" onClick={handleClick} ></i>
+            <i className="fa-regular fa-heart" onClick={handleClick}></i>
           </div>
         </div>
       </div>

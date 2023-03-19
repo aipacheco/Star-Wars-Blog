@@ -15,7 +15,6 @@ export const SinglePlanet = () => {
     }
     fetchData();
   }, [params.category, params.id]);
-  
 
   console.log("el Planeta", singlePlanet);
 
@@ -25,9 +24,14 @@ export const SinglePlanet = () => {
         <div className="row g-0">
           <div className="col-md-4">
             <img
-              src={`https://starwars-visualguide.com/assets/img/planets/${params.id}.jpg`}
+              src={
+                params.id === "1"
+                  ? "https://oakthorne.net/wiki/images/Tatooine.jpg"
+                  : `https://starwars-visualguide.com/assets/img/planets/${params.id}.jpg`
+              }
+              alt="Planet Image"
+              style={params.id === "1" ? {width: "400px", height: "400px"} : {}}
               className="img-fluid rounded-start"
-              alt="..."
             />
           </div>
           <div className="col-md-8">
@@ -43,18 +47,20 @@ export const SinglePlanet = () => {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </p>
-			  <p>Aquí van los datos del Planeta</p>
+              <p>Aquí van los datos del Planeta</p>
             </div>
           </div>
         </div>
-
-  
       </div>
       <Link to="/">
-          <button className="btn btn-outline-secondary btn-lg" href="#" role="button">
-            Volver al Inicio
-          </button>
-        </Link>
+        <button
+          className="btn btn-outline-secondary btn-lg"
+          href="#"
+          role="button"
+        >
+          Volver al Inicio
+        </button>
+      </Link>
     </>
   );
 };

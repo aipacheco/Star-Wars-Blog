@@ -1,35 +1,23 @@
-const getState = ({ getStore, getActions, setStore }) => {
-	return {
-		store: {
-			fav: [
-			]
-		},
-		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
-		}
-	};
+const getState = ({getStore, getActions, setStore}) => {
+  return {
+    store: {
+      fav: [],
+    },
+    actions: {
+      addFav: (data) => {
+        const store = getStore();
+        const duplicado = store.fav.find((item) => item === data);
+        if (!duplicado) {
+          setStore({fav: [...store.fav, data]});
+        }
+      },
+      deleteFav: (data) => {
+        const store = getStore();
+        const nuevaLista = store.fav.filter((favItem) => favItem !== data);
+        setStore({fav: nuevaLista});
+      },
+    },
+  };
 };
 
 export default getState;

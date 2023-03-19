@@ -37,3 +37,16 @@ p > a{
     height: fit-content;
    
 }
+
+.dropdown-menu li {
+    position: relative;
+    padding-right: 10px; /* agregar un espacio para el icono */
+  }
+.dropdown-menu li i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-40%);
+    float: right; /* agregar float a la derecha */
+  }
+  
