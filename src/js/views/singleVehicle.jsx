@@ -5,13 +5,15 @@ import {getData} from "../service/index.js";
 
 export const SingleVehicle = () => {
   const [singleVehicle, setSingleVehicle] = useState({});
-
+  const [loading, setLoading] = useState(true);
   const params = useParams();
 
   useEffect(() => {
     async function fetchData() {
+      setLoading(true);
       const info = await getData(params.category, params.id);
       setSingleVehicle(info.result.properties);
+      setLoading(false);
     }
     fetchData();
   }, [params.category, params.id]);
@@ -20,6 +22,14 @@ export const SingleVehicle = () => {
 
   return (
     <>
+    {loading ? (
+      <div className="d-flex justify-content-center">
+        <div class="spinner-grow text-light" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    ) : 
+   ( <>
       <div className="single">
         <div className="row g-0">
           <div className="col-md-4">
@@ -59,6 +69,7 @@ export const SingleVehicle = () => {
           Volver al Inicio
         </button>
       </Link>
-    </>
+    </>)
+   } </>
   );
 };

@@ -5,21 +5,30 @@ import {getData} from "../service/index.js";
 
 export const SinglePlanet = () => {
   const [singlePlanet, setSinglePlanet] = useState({});
-
+  const [loading, setLoading] = useState(true);
   const params = useParams();
 
   useEffect(() => {
     async function fetchData() {
+      setLoading(true);
       const info = await getData(params.category, params.id);
       setSinglePlanet(info.result.properties);
+      setLoading(false);
     }
     fetchData();
   }, [params.category, params.id]);
 
 
-
   return (
     <>
+    {loading ? (
+      <div className="d-flex justify-content-center">
+        <div class="spinner-grow text-light" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    ) : 
+   ( <>
       <div className="single">
         <div className="row g-0">
           <div className="col-md-4">
@@ -60,6 +69,7 @@ export const SinglePlanet = () => {
           Volver al Inicio
         </button>
       </Link>
-    </>
+    </>)
+   } </>
   );
 };
