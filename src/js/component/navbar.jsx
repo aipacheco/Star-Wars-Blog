@@ -5,7 +5,6 @@ import "../../styles/index.css";
 import {Context} from "../store/appContext.js";
 
 export const Navbar = () => {
-
   const {store, actions} = useContext(Context);
 
   const handleDelete = (item) => {
@@ -14,15 +13,18 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar sticky-top" id="navbar">
-  <div class="logo-container">
-    <Link to="/">
-      <img src={logo} alt="Logo" className="logo" />
-    </Link>
-    </div>
-    <div class="dropdown-container"> 
+      <Link to="/">
+        <img src={logo} alt="Logo" className="logo" />
+      </Link>
+      <h3 className="my-3" id="titulo-navbar">
+        STAR WARS DATABASE
+      </h3>
+
+      <div className="mx-5">
         <div className="dropdown">
           <button
-            className="btn btn-outline-warning dropdown-toggle" id="navdrop"
+            className="btn btn-outline-warning dropdown-toggle"
+            id="navdrop"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -51,8 +53,7 @@ export const Navbar = () => {
             </ul>
           )}
         </div>
-        </div>     
-     
+      </div>
     </nav>
   );
 };
