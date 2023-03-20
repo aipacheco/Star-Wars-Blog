@@ -30,6 +30,7 @@ export const Navbar = () => {
             aria-expanded="false"
           >
             Favoritos
+            <span className="badge">{store.fav.length}</span>
           </button>
 
           {store.fav.length === 0 ? (

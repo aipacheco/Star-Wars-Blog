@@ -28,7 +28,7 @@ const Card = (props) => {
           alt="Card image cap"
         ></img>
         <div className="card-body">
-          <h5 className="card-title">{props.name}</h5>
+          <h6 className="card-title">{props.name}</h6>
         </div>
         <div className="card-footer">
           <Link to={`${singlePage}/${props.category}/${props.id}`}>
