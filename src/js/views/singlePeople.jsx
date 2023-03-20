@@ -15,7 +15,6 @@ export const SinglePeople = () => {
     }
     fetchData();
   }, [params.category, params.id]);
-  
 
   console.log("el Personaje", singlePeople);
 
@@ -32,28 +31,26 @@ export const SinglePeople = () => {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title"> {singlePeople.name}</h5>
+              <h1 className="card-title"> {singlePeople.name}</h1>
               <p className="card-text">
                 {" "}
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+                {singlePeople.name} is a {singlePeople.gender} character from
+                the Star Wars saga. He was born in the year{" "}
+                {singlePeople.birth_year}. He has {singlePeople.eye_color} eyes,{" "}
+                {singlePeople.hair_color} hair, and {singlePeople.skin_color}{" "}
+                skin. His height is {singlePeople.height} cm and his weight is{" "}
+                {singlePeople.mass} kg.
               </p>
-			  <p>Aquí van los datos del Personaje</p>
             </div>
           </div>
         </div>
       </div>
-      
+
       <Link to="/">
-          <button className="btn btn-outline-warning btn-lg" role="button">
-            Volver al Inicio
-          </button>
-        </Link>
+        <button className="btn btn-outline-warning btn-lg" role="button">
+          Volver al Inicio
+        </button>
+      </Link>
     </>
   );
 };

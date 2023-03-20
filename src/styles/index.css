@@ -15,7 +15,6 @@
 .logo {
     width: 150px;
     margin-top: 5px;
-
 }
 
 
@@ -30,6 +29,8 @@ body {
 p {
     flex-direction: column;
     margin: auto;
+    color:#F5B80B;
+
 }
 
 p>img {

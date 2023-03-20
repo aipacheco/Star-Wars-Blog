@@ -15,7 +15,6 @@ export const SingleVehicle = () => {
     }
     fetchData();
   }, [params.category, params.id]);
-  
 
   console.log("el Vehículo", singleVehicle);
 
@@ -32,29 +31,30 @@ export const SingleVehicle = () => {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title"> {singleVehicle.name}</h5>
+              <h1 className="card-title"> {singleVehicle.name}</h1>
               <p className="card-text">
-                {" "}
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+                The TIE/LN starfighter is a starfighter manufactured by Sienar
+                Fleet Systems with a cargo capacity of 65. It is crewed by one
+                person and can only accommodate consumables for 2 days. Its cost
+                in credits is unknown. The starfighter has a length of 6.4
+                meters and a maximum atmospheric speed of 1200. It is classified
+                as a starfighter and has a Twin Ion Engine/Ln model. It is not
+                designed to carry any passengers and has no recorded pilots. The
+                TIE/LN starfighter has not appeared in any films yet.
               </p>
-			  <p>Aquí van los datos del Vehículo</p>
             </div>
           </div>
         </div>
-
-
       </div>
       <Link to="/">
-          <button className="btn btn-outline-warning btn-lg" href="#" role="button">
-            Volver al Inicio
-          </button>
-        </Link>
+        <button
+          className="btn btn-outline-warning btn-lg"
+          href="#"
+          role="button"
+        >
+          Volver al Inicio
+        </button>
+      </Link>
     </>
   );
 };

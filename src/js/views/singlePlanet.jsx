@@ -36,18 +36,17 @@ export const SinglePlanet = () => {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title"> {singlePlanet.name}</h5>
+              <h1 className="card-title"> {singlePlanet.name}</h1>
               <p className="card-text">
-                {" "}
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+                {singlePlanet.name} is a planet with a {singlePlanet.climate}{" "}
+                 climate. It has a diameter of {singlePlanet.diameter} kilometers
+                and a {singlePlanet.gravity} gravity. The planet takes{" "}
+                {singlePlanet.orbital_period} days to complete one orbit and has
+                a rotation period of {singlePlanet.rotation_period} hours.{" "}
+                {singlePlanet.name} surface is {singlePlanet.terrain} {" "}
+                terrain with level {singlePlanet.surface_water}% {" "}water. The planet has
+                a population of {singlePlanet.population} people.
               </p>
-              <p>Aquí van los datos del Planeta</p>
             </div>
           </div>
         </div>
