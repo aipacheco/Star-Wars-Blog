@@ -16,7 +16,7 @@ export const SinglePlanet = () => {
     fetchData();
   }, [params.category, params.id]);
 
-  console.log("el Planeta", singlePlanet);
+
 
   return (
     <>

@@ -16,7 +16,7 @@ export const SingleVehicle = () => {
     fetchData();
   }, [params.category, params.id]);
 
-  console.log("el Vehículo", singleVehicle);
+
 
   return (
     <>
@@ -33,14 +33,18 @@ export const SingleVehicle = () => {
             <div className="card-body">
               <h1 className="card-title"> {singleVehicle.name}</h1>
               <p className="card-text">
-                The TIE/LN starfighter is a starfighter manufactured by Sienar
-                Fleet Systems with a cargo capacity of 65. It is crewed by one
-                person and can only accommodate consumables for 2 days. Its cost
-                in credits is unknown. The starfighter has a length of 6.4
-                meters and a maximum atmospheric speed of 1200. It is classified
-                as a starfighter and has a Twin Ion Engine/Ln model. It is not
-                designed to carry any passengers and has no recorded pilots. The
-                TIE/LN starfighter has not appeared in any films yet.
+                The {singleVehicle.name} is a {singleVehicle.vehicle_class}{" "}
+                {singleVehicle.model} manufactured by{" "}
+                {singleVehicle.manufacturer} with a cargo capacity of{" "}
+                {singleVehicle.cargo_capacity} kg. It is crewed by{" "}
+                {singleVehicle.crew}{" "}
+                person and can accommodate consumables for{" "}
+                {singleVehicle.consumables}. Its cost in credits is{" "}
+                {singleVehicle.cost_in_credits}. The{" "}
+               vehicle has a length of{" "}
+                {singleVehicle.length} meters and a maximum atmospheric speed of{" "}
+                {singleVehicle.max_atmosphering_speed} km/h. It is designed to
+                carry {singleVehicle.passengers} passengers.
               </p>
             </div>
           </div>

@@ -14,17 +14,15 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar sticky-top" id="navbar">
-
-     <div className="logo-container">
+  <div class="logo-container">
     <Link to="/">
       <img src={logo} alt="Logo" className="logo" />
     </Link>
-  </div>
-
-      <div className="mx-5">
+    </div>
+    <div class="dropdown-container"> 
         <div className="dropdown">
           <button
-            className="btn btn-outline-warning dropdown-toggle"
+            className="btn btn-outline-warning dropdown-toggle" id="navdrop"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -53,7 +51,8 @@ export const Navbar = () => {
             </ul>
           )}
         </div>
-      </div>
+        </div>     
+     
     </nav>
   );
 };

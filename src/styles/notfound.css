@@ -1,0 +1,11 @@
+.notfound {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+   font-size:  100px;
+   text-align: center;
+   text-shadow: 0 0 1px #ffffffc5, 0 0 5px #ffffff9c, 0 0 10px #ffffff45, 0 0 20px #5cabfffc, 0 0 30px #5cabfffc, 0 0 40px #5cabfffc, 0 0 55px #5cabfffc, 0 0 75px #5cabfffc;
+  }
+  

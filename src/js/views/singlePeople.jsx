@@ -16,7 +16,7 @@ export const SinglePeople = () => {
     fetchData();
   }, [params.category, params.id]);
 
-  console.log("el Personaje", singlePeople);
+
 
   return (
     <>

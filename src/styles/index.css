@@ -3,27 +3,34 @@
     justify-content: space-between;
     align-items: center;
     background-color: black;
-}
-
-.logo-container {
+  }
+  
+  .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-}
-
-.logo {
-    width: 150px;
-    margin-top: 5px;
-}
-
-
+  }
+  
+  .dropdown-container {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  .logo {
+    max-width: 150px;
+    margin-left: 160px;
+    height: auto;
+    display: block;
+  }
+  
 
 body {
     background-image: url("https://images.unsplash.com/photo-1514483127413-f72f273478c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Orbitron', sans-serif;
 }
 
 p {
@@ -49,10 +56,6 @@ p>a {
 
 }
 
-#navbar {
-    height: fit-content;
-
-}
 
 .dropdown-menu.show{
     background-color: black;

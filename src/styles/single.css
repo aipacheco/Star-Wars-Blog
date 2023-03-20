@@ -14,3 +14,9 @@ button {
 .btn-lg{
 margin: 100px;
 }
+.card-text{
+    font-size: 32px;
+}
+h1{
+    font-size: 50px;
+}

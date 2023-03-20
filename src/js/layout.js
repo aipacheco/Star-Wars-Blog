@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Home} from "./views/home.jsx";
+import {Notfound} from "./views/notFound.jsx";
 import {SinglePeople} from "./views/singlePeople.jsx";
 import {SinglePlanet} from "./views/singlePlanet.jsx";
 import {SingleVehicle} from "./views/singleVehicle.jsx";
@@ -32,7 +33,7 @@ const Layout = () => {
             path="/singlePlanet/:category/:id"
             element={<SinglePlanet />}
           />
-          <Route path="*" element={<h1>Not found!</h1>} />
+          <Route path="*" element={<Notfound/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
