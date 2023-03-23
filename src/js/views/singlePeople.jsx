@@ -3,27 +3,41 @@ import "../../styles/single.css";
 import {Link, useParams} from "react-router-dom";
 import {getData} from "../service/index.js";
 
-export const SinglePeople = () => {
-  const [singlePeople, setSinglePeople] = useState({});
-  const [loading, setLoading] = useState(true);
-  const params = useParams();
+export const SinglePeople = () => { 
+  const [singlePeople, setSinglePeople] = useState({}); //para mostrar una sola persona
+  const [loading, setLoading] = useState(true); //para el spinner de carga
+  const params = useParams(); //los params para cambiar el redireccionamiento
 
   useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      const info = await getData(params.category, params.id);
-      setSinglePeople(info.result.properties);
-      setLoading(false);
-    }
+    //console.log("los params", params) para ver lo que hay
+    const fetchData = async () => { 
+      try {
+        setLoading(true); //para mostrar el spinner mientras se carga la info
+        const info = await getData(params.category, params.id); 
+        /*traemos la funcion get de index.js y le damos la categoria e id por los params
+        los params son los que hemos utilizado como props en la card diciendole props.category y props.id
+        */
+        setSinglePeople(info.result.properties); //seteamos al array de persona sola
+        setLoading(false); //para quitar el spinner de carga
+      } catch (error) {
+        console.log(error);
+        setLoading(false); //para quitar el spinner de carga
+      }
+    };
     fetchData();
-  }, [params.category, params.id]);
+  }, [params.category, params.id]); //metemos aqui los params por si cambian, se vuelva a cargar la web
+  
+  /** Como en home, usamos los params para decirle que imagen queremos mediante el uid de la api de swapi
+   * y nos traemos las propiedades del array singlePeople para poderlas usar, p. ej {singlePeople.name} es el 
+   * nombre del personaje.
+   */
 
   return (
     <>
       {loading ? (
         <div className="d-flex justify-content-center">
-          <div class="spinner-grow text-light" role="status">
-            <span class="sr-only">Loading...</span>
+          <div className="spinner-grow text-light" role="status">
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       ) : (

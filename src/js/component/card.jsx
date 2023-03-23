@@ -4,21 +4,22 @@ import {Link} from "react-router-dom";
 import {Context} from "../store/appContext.js";
 
 const Card = (props) => {
-  const {store, actions} = useContext(Context);
+  const {store, actions} = useContext(Context); //contexto global
 
-  const singlePage =
-    props.category == "people"
-      ? "singlePeople"
-      : props.category == "vehicles"
-      ? "singleVehicle"
-      : props.category == "planets"
-      ? "singlePlanet"
+  const singlePage = //se crea la constante para poderla usar en el link hacia la vista detallada
+    props.category == "people" //si es para people
+      ? "singlePeople" //tiene que poner el string de singlePeople
+      : props.category == "vehicles" //si son vehiculos
+      ? "singleVehicle" //tiene que poner el string de singleVehicle
+      : props.category == "planets" //si son planetas
+      ? "singlePlanet" //tiene que poner el string de singlePlanets
       : null;
 
-  const handleClick = () => {
-    actions.addFav(props.name);
+  const handleClick = () => { //funcion intermedia para llamar a la funcion de flux 
+    actions.addFav(props.name); //funcion de flux para añadir favoritos
   };
-
+/** El <Link de abajo redirige dependiendo del condicional que hemos creado arriba pasandole los props
+ * dependiendo del ternario le dará una categoría y el id sobre el que pulsamos> */
   return (
     <div className="cartas">
       <div className="card" style={{width: "18rem"}}>

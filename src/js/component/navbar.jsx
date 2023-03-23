@@ -5,10 +5,10 @@ import "../../styles/index.css";
 import {Context} from "../store/appContext.js";
 
 export const Navbar = () => {
-  const {store, actions} = useContext(Context);
+  const {store, actions} = useContext(Context); //contexto global
 
-  const handleDelete = (item) => {
-    actions.deleteFav(item);
+  const handleDelete = (item) => { //funcion intermedia para el borrado del icono de la X de favoritos
+    actions.deleteFav(item); //se llama a la funcion de flux para borrar el elemento (ver flux)
   };
 
   return (
@@ -30,7 +30,8 @@ export const Navbar = () => {
             aria-expanded="false"
           >
             Favoritos
-            <span className="badge badge-warning">{store.fav.length}</span>
+            <span className="badge badge-warning">{store.fav.length //para que el número sea dinamico cogemos el lenght del array fav de flux
+            }</span>
           </button>
 
           {store.fav.length === 0 ? (
@@ -41,12 +42,13 @@ export const Navbar = () => {
             </ul>
           ) : (
             <ul className="dropdown-menu dropdown-menu-end">
-              {store.fav.map((item, key) => (
+              {store.fav.map((item, key) => ( //map para pintar los favoritos en el dropdown y añadir un icono de x 
                 <li key={key}>
                   {item}
                   <i
                     className="fa-solid fa-xmark"
-                    onClick={() => handleDelete(item)}
+                    onClick={() => handleDelete(item) //llamamos a la funcion intermedia en la x para borrar los favoritos
+                    }
                   ></i>
                 </li>
               ))}
